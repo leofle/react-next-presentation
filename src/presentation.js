@@ -43,10 +43,10 @@ export default class Presentation extends React.Component {
       >
         <Slide transition={['zoom']} bgColor="primary">
           <Heading size={1} fit caps lineHeight={1} textColor="secondary">
-            Spectacle Boilerplate
+            How i create UI with React and Machine learning
           </Heading>
           <Text margin="10px 0 0" textColor="tertiary" size={1} fit bold>
-            open the presentation/index.js file to get started
+            and why we need this any ways...
           </Text>
         </Slide>
         <Slide transition={['fade']} bgColor="tertiary">
