@@ -4,6 +4,7 @@ import styled from 'styled-components';
 
 // Import Spectacle Core tags
 import {
+  Appear,
   BlockQuote,
   Cite,
   Deck,
@@ -12,7 +13,7 @@ import {
   List,
   Quote,
   Slide,
-  Text,
+  Text
 } from 'spectacle';
 
 // Import theme
@@ -67,24 +68,28 @@ export default class Presentation extends React.Component {
           <Heading size={6} textColor="primary" caps>
             Typography
           </Heading>
-          <CustomHeading>
-            custom h1...
-          </CustomHeading>
-          <Heading size={1} textColor="secondary">
-            Heading 1
-          </Heading>
-          <Heading size={2} textColor="secondary">
-            Heading 2
-          </Heading>
-          <Heading size={3} textColor="secondary">
-            Heading 3
-          </Heading>
-          <Heading size={4} textColor="secondary">
-            Heading 4
-          </Heading>
-          <Heading size={5} textColor="secondary">
-            Heading 5
-          </Heading>
+          <Appear order={1}>
+            <CustomHeading>
+              custom h1...
+            </CustomHeading>
+          </Appear>
+          <Appear order={2}>
+            <Heading size={1} textColor="secondary">
+              Heading 1
+            </Heading>
+          </Appear>
+            <Heading size={2} textColor="secondary">
+              Heading 2
+            </Heading>
+            <Heading size={3} textColor="secondary">
+              Heading 3
+            </Heading>
+            <Heading size={4} textColor="secondary">
+              Heading 4
+            </Heading>
+            <Heading size={5} textColor="secondary">
+              Heading 5
+            </Heading>
           <Text size={6} textColor="secondary">
             Standard text
           </Text>
@@ -100,7 +105,19 @@ export default class Presentation extends React.Component {
             <ListItem>Item 4</ListItem>
           </List>
         </Slide>
-        <Slide transition={['fade']} bgColor="secondary" textColor="primary">
+        <Slide transition={[
+          'fade',
+          (transitioning, forward) => {
+            const angle = forward ? -180 : 180;
+            return {
+              transform: `
+          translate3d(0%, ${transitioning ? 100 : 0}%, 0)
+          rotate(${transitioning ? angle : 0}deg)
+        `,
+              backgroundColor: transitioning ? '#26afff' : '#000'
+            };
+          }
+        ]} bgColor="secondary" textColor="primary">
           <BlockQuote>
             <Quote>Example Quote</Quote>
             <Cite>Author</Cite>
