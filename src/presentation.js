@@ -1,5 +1,6 @@
 // Import React
 import React from 'react';
+import styled from 'styled-components';
 
 // Import Spectacle Core tags
 import {
@@ -16,9 +17,15 @@ import {
 
 // Import theme
 import createTheme from 'spectacle/lib/themes/default';
-
+// Import preloader
+import preloader from 'spectacle/lib/utils/preloader';
 // Require CSS
 require('normalize.css');
+
+const CustomHeading = styled.h1`
+  font-size: 1.2em;
+  color: papayawhip;
+`;
 
 const theme = createTheme(
   {
@@ -33,10 +40,17 @@ const theme = createTheme(
   }
 );
 
+const images = {
+  react: require("./assets/react-logo.png")
+}
+
+preloader(images);
+
 export default class Presentation extends React.Component {
   render() {
     return (
       <Deck
+        progress={'bar'}
         transition={['zoom', 'slide']}
         transitionDuration={500}
         theme={theme}
@@ -53,6 +67,9 @@ export default class Presentation extends React.Component {
           <Heading size={6} textColor="primary" caps>
             Typography
           </Heading>
+          <CustomHeading>
+            custom h1...
+          </CustomHeading>
           <Heading size={1} textColor="secondary">
             Heading 1
           </Heading>
