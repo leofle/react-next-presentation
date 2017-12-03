@@ -5,13 +5,10 @@ import styled from 'styled-components';
 // Import Spectacle Core tags
 import {
   Appear,
-  BlockQuote,
-  Cite,
   Deck,
   Heading,
   ListItem,
   List,
-  Quote,
   Slide,
   Text
 } from 'spectacle';
@@ -24,8 +21,7 @@ import preloader from 'spectacle/lib/utils/preloader';
 require('normalize.css');
 
 const CustomHeading = styled.h1`
-  font-size: 1.2em;
-  color: papayawhip;
+  font-size: 2em;
 `;
 
 const theme = createTheme(
@@ -65,34 +61,11 @@ export default class Presentation extends React.Component {
           </Text>
         </Slide>
         <Slide transition={['fade']} bgColor="tertiary">
-          <Heading size={6} textColor="primary" caps>
-            Typography
-          </Heading>
           <Appear order={1}>
             <CustomHeading>
               custom h1...
             </CustomHeading>
           </Appear>
-          <Appear order={2}>
-            <Heading size={1} textColor="secondary">
-              Heading 1
-            </Heading>
-          </Appear>
-            <Heading size={2} textColor="secondary">
-              Heading 2
-            </Heading>
-            <Heading size={3} textColor="secondary">
-              Heading 3
-            </Heading>
-            <Heading size={4} textColor="secondary">
-              Heading 4
-            </Heading>
-            <Heading size={5} textColor="secondary">
-              Heading 5
-            </Heading>
-          <Text size={6} textColor="secondary">
-            Standard text
-          </Text>
         </Slide>
         <Slide transition={['fade']} bgColor="primary" textColor="tertiary">
           <Heading size={6} textColor="secondary" caps>
@@ -118,10 +91,9 @@ export default class Presentation extends React.Component {
             };
           }
         ]} bgColor="secondary" textColor="primary">
-          <BlockQuote>
-            <Quote>Example Quote</Quote>
-            <Cite>Author</Cite>
-          </BlockQuote>
+          <CustomHeading>
+            Thank You!
+          </CustomHeading>
         </Slide>
       </Deck>
     );
