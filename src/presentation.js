@@ -61,11 +61,26 @@ export default class Presentation extends React.Component {
           </Text>
         </Slide>
         <Slide transition={['fade']} bgColor="tertiary">
+          <CustomHeading>
+              What is Not About
+          </CustomHeading>
+          <List>
           <Appear order={1}>
-            <CustomHeading>
-              custom h1...
-            </CustomHeading>
+            <ListItem>
+              Machinne learning
+            </ListItem>
           </Appear>
+          <Appear order={2}>
+            <ListItem>
+              Design Patterns
+            </ListItem>
+          </Appear>
+          <Appear order={3}>
+            <ListItem>
+              AI Best practices
+            </ListItem>
+          </Appear>
+          </List>
         </Slide>
         <Slide transition={['fade']} bgColor="primary" textColor="tertiary">
           <Heading size={6} textColor="secondary" caps>
