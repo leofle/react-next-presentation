@@ -17,9 +17,9 @@ import {
 import createTheme from 'spectacle/lib/themes/default';
 // Import preloader
 import preloader from 'spectacle/lib/utils/preloader';
+import CodeSlide from 'spectacle-code-slide';
 // Require CSS
 require('normalize.css');
-
 const CustomHeading = styled.h1`
   font-size: 2em;
 `;
@@ -37,6 +37,9 @@ const theme = createTheme(
   }
 );
 
+const files = {
+  comp: require("./assets/component.txt")
+}
 const images = {
   react: require("./assets/react-logo.png")
 }
@@ -84,15 +87,44 @@ export default class Presentation extends React.Component {
         </Slide>
         <Slide transition={['fade']} bgColor="primary" textColor="tertiary">
           <Heading size={6} textColor="secondary" caps>
-            Standard List
+            What IS About
           </Heading>
           <List>
-            <ListItem>Item 1</ListItem>
-            <ListItem>Item 2</ListItem>
-            <ListItem>Item 3</ListItem>
-            <ListItem>Item 4</ListItem>
+            <ListItem>Ideas and research</ListItem>
+            <ListItem>React components patterns</ListItem>
+            <ListItem>AI as a helper</ListItem>
+            <ListItem>Showing the path</ListItem>
           </List>
         </Slide>
+        <Slide transition={['fade']} bgColor="primary" textColor="tertiary">
+          <CustomHeading>
+            The problem
+          </CustomHeading>
+        </Slide>
+        <Slide transition={['fade']} bgColor="primary" textColor="tertiary">
+          <CustomHeading>
+            The wrong solution
+          </CustomHeading>
+        </Slide>
+        <Slide transition={['fade']} bgColor="primary" textColor="tertiary">
+          <CustomHeading>
+            My solution
+          </CustomHeading>
+        </Slide>
+        <CodeSlide
+            bgColor="#000"
+            color="magenta"
+            transition={[]}
+            lang="js"
+            code={files.comp}
+            ranges={[
+              { loc: [0, 6], title: "HOC example" },
+              { loc: [0, 2], note: "The Beginning" },
+              { loc: [2, 5], note: "Heres a note!" },
+              { loc: [5, 6], note: "Heres a note!" },
+              { loc: [0, 6] },
+              // ...
+            ]}/>
         <Slide transition={[
           'fade',
           (transitioning, forward) => {
