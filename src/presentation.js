@@ -10,8 +10,7 @@ import {
   ListItem,
   List,
   Slide,
-  Text,
-  Image
+  Text
 } from 'spectacle';
 
 // Import theme
@@ -44,7 +43,8 @@ const files = {
   comp: require("./assets/component.txt")
 }
 const images = {
-  react: require("./assets/react-logo.png")
+  react: require("./assets/react-logo.png"),
+  t2: require("./assets/t2.jpg")
 }
 const gifs = {
   t2baby: require("./assets/t2baby.gif"),
@@ -58,11 +58,12 @@ export default class Presentation extends React.Component {
   render() {
     return (
       <Deck
-        progress={'bar'}
-        transition={['zoom', 'slide']}
-        transitionDuration={500}
-        theme={theme}
+      progress={'bar'}
+      transition={['zoom', 'slide']}
+      transitionDuration={500}
+      theme={theme}
       >
+        <Slide transition={['fade']} bgImage={images.t2} bgSize={'69vh'} bgRepeat={'no-repeat'}/>
         <Slide transition={['zoom']} bgColor="primary">
           <Heading size={1} fit lineHeight={1} textColor="white">
             How i create UI with React and Machine learning
@@ -104,6 +105,7 @@ export default class Presentation extends React.Component {
             <ListItem>Showing the path</ListItem>
           </List>
         </Slide>
+        <Slide transition={["fade"]} bgImage={gifs.t100}/>
         <Slide transition={['fade']} bgColor="primary" textColor="white">
           <CustomHeading>
             The problem
@@ -134,7 +136,6 @@ export default class Presentation extends React.Component {
               // ...
             ]}/>
         <Slide transition={["fade"]} bgImage={gifs.t2baby}/>
-        <Slide transition={["fade"]} bgImage={gifs.t100}/>
         <Slide transition={["fade"]} bgImage={gifs.bye}/>
         <Slide transition={["fade"]} bgImage={gifs.nono}/>
         <Slide transition={[
