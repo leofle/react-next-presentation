@@ -23,6 +23,7 @@ import CodeSlide from 'spectacle-code-slide';
 require('normalize.css');
 const CustomHeading = styled.h1`
   font-size: 2em;
+  color: white;
 `;
 
 const theme = createTheme(
@@ -34,8 +35,8 @@ const theme = createTheme(
     white: '#fff'
   },
   {
-    primary: 'Montserrat',
-    secondary: 'Helvetica',
+    primary: { name: "Roboto", googleFont: true, styles: [ "400", "700" ] },
+    secondary: 'sans-serif',
   }
 );
 
@@ -43,10 +44,14 @@ const files = {
   comp: require("./assets/component.txt")
 }
 const images = {
-  react: require("./assets/react-logo.png"),
-  t2baby: require("./assets/t2baby.gif")
+  react: require("./assets/react-logo.png")
 }
-
+const gifs = {
+  t2baby: require("./assets/t2baby.gif"),
+  t100: require("./assets/t100.gif"),
+  bye: require("./assets/bye.gif"),
+  nono: require("./assets/nono.gif")
+}
 preloader(images);
 
 export default class Presentation extends React.Component {
@@ -57,19 +62,18 @@ export default class Presentation extends React.Component {
         transition={['zoom', 'slide']}
         transitionDuration={500}
         theme={theme}
-        textFont={theme.primary}
       >
         <Slide transition={['zoom']} bgColor="primary">
-          <Heading size={1} fit caps lineHeight={1} textColor="white">
+          <Heading size={1} fit lineHeight={1} textColor="white">
             How i create UI with React and Machine learning
           </Heading>
           <Text margin="10px 0 0" textColor="white" size={1} fit bold>
             and why we need this any ways...
           </Text>
         </Slide>
-        <Slide transition={['fade']} bgColor="primary">
+        <Slide transition={['fade']} bgColor="primary" textColor="white">
           <CustomHeading>
-              What is Not About
+              What is NOT About
           </CustomHeading>
           <List>
           <Appear order={1}>
@@ -90,9 +94,9 @@ export default class Presentation extends React.Component {
           </List>
         </Slide>
         <Slide transition={['fade']} bgColor="primary" textColor="white">
-          <Heading size={6} textColor="white" caps>
-            What IS About
-          </Heading>
+          <CustomHeading>
+            What it IS About
+          </CustomHeading>
           <List>
             <ListItem>Ideas and research</ListItem>
             <ListItem>React components patterns</ListItem>
@@ -129,9 +133,10 @@ export default class Presentation extends React.Component {
               { loc: [0, 6] },
               // ...
             ]}/>
-        <Slide transition={['fade']} bgColor="primary" textColor="tertiary">
-          <Image src={images.t2baby} width={'100%'}/>
-        </Slide>
+        <Slide transition={["fade"]} bgImage={gifs.t2baby}/>
+        <Slide transition={["fade"]} bgImage={gifs.t100}/>
+        <Slide transition={["fade"]} bgImage={gifs.bye}/>
+        <Slide transition={["fade"]} bgImage={gifs.nono}/>
         <Slide transition={[
           'fade',
           (transitioning, forward) => {
