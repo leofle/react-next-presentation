@@ -10,7 +10,8 @@ import {
   ListItem,
   List,
   Slide,
-  Text
+  Text,
+  Image
 } from 'spectacle';
 
 // Import theme
@@ -26,10 +27,11 @@ const CustomHeading = styled.h1`
 
 const theme = createTheme(
   {
-    primary: 'white',
+    primary: '#000',
     secondary: '#1F2022',
     tertiary: '#03A9FC',
     quartenary: '#CECECE',
+    white: '#fff'
   },
   {
     primary: 'Montserrat',
@@ -41,7 +43,8 @@ const files = {
   comp: require("./assets/component.txt")
 }
 const images = {
-  react: require("./assets/react-logo.png")
+  react: require("./assets/react-logo.png"),
+  t2baby: require("./assets/t2baby.gif")
 }
 
 preloader(images);
@@ -54,16 +57,17 @@ export default class Presentation extends React.Component {
         transition={['zoom', 'slide']}
         transitionDuration={500}
         theme={theme}
+        textFont={theme.primary}
       >
         <Slide transition={['zoom']} bgColor="primary">
-          <Heading size={1} fit caps lineHeight={1} textColor="secondary">
+          <Heading size={1} fit caps lineHeight={1} textColor="white">
             How i create UI with React and Machine learning
           </Heading>
-          <Text margin="10px 0 0" textColor="tertiary" size={1} fit bold>
+          <Text margin="10px 0 0" textColor="white" size={1} fit bold>
             and why we need this any ways...
           </Text>
         </Slide>
-        <Slide transition={['fade']} bgColor="tertiary">
+        <Slide transition={['fade']} bgColor="primary">
           <CustomHeading>
               What is Not About
           </CustomHeading>
@@ -85,8 +89,8 @@ export default class Presentation extends React.Component {
           </Appear>
           </List>
         </Slide>
-        <Slide transition={['fade']} bgColor="primary" textColor="tertiary">
-          <Heading size={6} textColor="secondary" caps>
+        <Slide transition={['fade']} bgColor="primary" textColor="white">
+          <Heading size={6} textColor="white" caps>
             What IS About
           </Heading>
           <List>
@@ -96,17 +100,17 @@ export default class Presentation extends React.Component {
             <ListItem>Showing the path</ListItem>
           </List>
         </Slide>
-        <Slide transition={['fade']} bgColor="primary" textColor="tertiary">
+        <Slide transition={['fade']} bgColor="primary" textColor="white">
           <CustomHeading>
             The problem
           </CustomHeading>
         </Slide>
-        <Slide transition={['fade']} bgColor="primary" textColor="tertiary">
+        <Slide transition={['fade']} bgColor="primary" textColor="white">
           <CustomHeading>
             The wrong solution
           </CustomHeading>
         </Slide>
-        <Slide transition={['fade']} bgColor="primary" textColor="tertiary">
+        <Slide transition={['fade']} bgColor="primary" textColor="white">
           <CustomHeading>
             My solution
           </CustomHeading>
@@ -125,19 +129,22 @@ export default class Presentation extends React.Component {
               { loc: [0, 6] },
               // ...
             ]}/>
+        <Slide transition={['fade']} bgColor="primary" textColor="tertiary">
+          <Image src={images.t2baby} width={'100%'}/>
+        </Slide>
         <Slide transition={[
           'fade',
           (transitioning, forward) => {
             const angle = forward ? -180 : 180;
             return {
               transform: `
-          translate3d(0%, ${transitioning ? 100 : 0}%, 0)
-          rotate(${transitioning ? angle : 0}deg)
-        `,
+              translate3d(0%, ${transitioning ? 100 : 0}%, 0)
+              rotate(${transitioning ? angle : 0}deg)
+              `,
               backgroundColor: transitioning ? '#26afff' : '#000'
             };
           }
-        ]} bgColor="secondary" textColor="primary">
+        ]} bgColor="primary" textColor="white">
           <CustomHeading>
             Thank You!
           </CustomHeading>
