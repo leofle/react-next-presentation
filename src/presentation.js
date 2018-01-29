@@ -44,7 +44,7 @@ const files = {
 }
 const images = {
   react: require("./assets/react-logo.png"),
-  t2: require("./assets/t2.jpg")
+  t2: require("./assets/liot2.png")
 }
 const gifs = {
   t2baby: require("./assets/t2baby.gif"),
