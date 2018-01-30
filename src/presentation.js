@@ -24,7 +24,9 @@ const CustomHeading = styled.h1`
   font-size: 2em;
   color: white;
 `;
-
+const RedShadow = styled.p`
+    text-shadow: 4px 3px 5px #a20902;
+`;
 const theme = createTheme(
   {
     primary: '#000',
@@ -63,7 +65,16 @@ export default class Presentation extends React.Component {
       transitionDuration={500}
       theme={theme}
       >
-        <Slide transition={['fade']} bgImage={images.t2} bgSize={'69vh'} bgRepeat={'no-repeat'}/>
+        <Slide align="center flex-end" transition={['fade']} bgImage={images.t2} bgSize={'69vh'} bgRepeat={'no-repeat'}>
+          <RedShadow>
+            <Text margin="10px 0 0" textColor="white" textSize={'54px'} caps bold googleFont="Roboto">
+              Componator 2
+            </Text>
+            <Text margin="10px 0 0" textColor="white" textSize={'54px'} caps bold googleFont="Roboto">
+              Judgment Day
+            </Text>
+          </RedShadow>
+        </Slide>
         <Slide transition={['zoom']} bgColor="primary">
           <Heading size={1} fit lineHeight={1} textColor="white">
             How i create UI with React and Machine learning
