@@ -42,7 +42,8 @@ const theme = createTheme(
 );
 
 const files = {
-  comp: require("./assets/component.txt")
+  comp: require("./assets/component.txt"),
+  json: require("./assets/jsonAfter.txt")
 }
 const images = {
   react: require("./assets/react-logo.png"),
@@ -134,16 +135,30 @@ export default class Presentation extends React.Component {
         </Slide>
         <CodeSlide
             bgColor="#000"
-            color="magenta"
+            color="#80de13"
             transition={[]}
             lang="js"
             code={files.comp}
             ranges={[
-              { loc: [0, 6], title: "HOC example" },
-              { loc: [0, 2], note: "The Beginning" },
-              { loc: [2, 5], note: "Heres a note!" },
-              { loc: [5, 6], note: "Heres a note!" },
-              { loc: [0, 6] },
+              { loc: [0, 12], title: "JSON Before" },
+              { loc: [0, 4], note: "The Beginning" },
+              { loc: [4, 8], note: "Heres a note!" },
+              { loc: [8, 12], note: "Heres a note!" },
+              { loc: [0, 12] },
+              // ...
+            ]}/>
+        <CodeSlide
+            bgColor="#000"
+            color="#80de13"
+            transition={[]}
+            lang="js"
+            code={files.json}
+            ranges={[
+              { loc: [0, 15], title: "JSON After" },
+              { loc: [0, 5], note: "The Beginning" },
+              { loc: [5, 9], note: "Heres a note!" },
+              { loc: [9, 13], note: "Heres a note!" },
+              { loc: [0, 15] },
               // ...
             ]}/>
         <Slide transition={["fade"]} bgImage={gifs.t2baby}/>
