@@ -14,7 +14,8 @@ import {
   BlockQuote,
   Quote,
   Cite,
-  Image
+  Image,
+  Typeface
 } from 'spectacle';
 
 // Import theme
@@ -60,7 +61,8 @@ const images = {
   rec3: require("./assets/netflix_recomends3.png"),
   rec4: require("./assets/netflix_recomends4.png"),
   face1: require("./assets/face-knows.png"),
-  face2: require("./assets/face-knows2.png")
+  face2: require("./assets/face-knows2.png"),
+  sisense: require("./assets/sisense.png")
 }
 const gifs = {
   t2baby: require("./assets/t2baby.gif"),
@@ -98,6 +100,24 @@ export default class Presentation extends React.Component {
           <Text margin="10px 0 0" textColor="white" size={1} fit bold>
             and why we need this any ways...
           </Text>
+        </Slide>
+        <Slide transition={["fade"]} bgColor="primary">
+          <Typeface googleFont="Josefin Slab" weight={400}>
+            <Heading size={2} textColor="white"> Lead UX Engineer </Heading>
+          </Typeface>
+          <Text textColor="transparent">blah blah</Text>
+          <Image src={images.sisense} width={500} />
+        </Slide>
+        <Slide transition={["fade"]} bgColor="primary">
+          <Typeface googleFont="Josefin Slab" weight={400}>
+            <Heading size={2} textColor="white"> I make cool stuff!</Heading>
+          </Typeface>
+          <Text textColor="transparent">blah blah</Text>
+          <Heading size={3} textColor="secondary">
+          <span role="img" aria-label="rock horns with hand">
+            🤘
+          </span>
+          </Heading>
         </Slide>
         <Slide transition={['fade']} bgColor="primary" textColor="white">
           <CustomHeading>
