@@ -10,7 +10,11 @@ import {
   ListItem,
   List,
   Slide,
-  Text
+  Text,
+  BlockQuote,
+  Quote,
+  Cite,
+  Image
 } from 'spectacle';
 
 // Import theme
@@ -47,13 +51,23 @@ const files = {
 }
 const images = {
   react: require("./assets/react-logo.png"),
-  t2: require("./assets/liot2.png")
+  t2: require("./assets/liot2.png"),
+  tesla: require("./assets/tesla-logo.png"),
+  facebook: require("./assets/face-logo.png"),
+  netflix: require("./assets/netflix-logo.png"),
+  rec1: require("./assets/netflix_recomends1.png"),
+  rec2: require("./assets/netflix_recomends2.png"),
+  rec3: require("./assets/netflix_recomends3.png"),
+  rec4: require("./assets/netflix_recomends4.png"),
+  face1: require("./assets/face-knows.png"),
+  face2: require("./assets/face-knows2.png")
 }
 const gifs = {
   t2baby: require("./assets/t2baby.gif"),
   t100: require("./assets/t100.gif"),
   bye: require("./assets/bye.gif"),
-  nono: require("./assets/nono.gif")
+  nono: require("./assets/nono.gif"),
+  tesla: require("./assets/tesla.gif")
 }
 preloader(images);
 
@@ -117,20 +131,44 @@ export default class Presentation extends React.Component {
             <ListItem>Showing the path</ListItem>
           </List>
         </Slide>
+        <Slide transition={['fade']} bgColor="primary" textColor="white">
+          <CustomHeading>
+            What is Machinne learning?
+          </CustomHeading>
+        </Slide>
         <Slide transition={["fade"]} bgImage={gifs.t100}/>
         <Slide transition={['fade']} bgColor="primary" textColor="white">
-          <CustomHeading>
-            The problem
-          </CustomHeading>
+          <BlockQuote >
+            <Quote textColor="white">
+              "...Machine learning is a field of computer science that gives computer systems the ability to "learn" with data, without being explicitly programmed..."              
+            </Quote>
+            <Cite>Wikipedia god</Cite>
+          </BlockQuote>
         </Slide>
         <Slide transition={['fade']} bgColor="primary" textColor="white">
           <CustomHeading>
-            The wrong solution
+            ML explanation (img)
           </CustomHeading>
         </Slide>
         <Slide transition={['fade']} bgColor="primary" textColor="white">
+          <Image src={images.netflix}/>
+        </Slide>
+        <Slide transition={['fade']} bgImage={images.rec1}/>
+        <Slide transition={['fade']} bgImage={images.rec2}/>
+        <Slide transition={['fade']} bgImage={images.rec3}/>
+        <Slide transition={['fade']} bgImage={images.rec4}/>
+        <Slide transition={['fade']} bgColor="primary" textColor="white">
+          <Image width="500px" src={images.facebook}/>
+        </Slide>
+        <Slide transition={['fade']} bgImage={images.face1}/>
+        <Slide transition={['fade']} bgImage={images.face2}/>
+        <Slide transition={['fade']} bgColor="primary" textColor="white">
+          <Image src={images.tesla}/>
+        </Slide>
+        <Slide transition={["fade"]} bgImage={gifs.tesla}/>
+        <Slide transition={['fade']} bgColor="primary" textColor="white">
           <CustomHeading>
-            My solution
+            What if?...
           </CustomHeading>
         </Slide>
         <CodeSlide
@@ -162,6 +200,11 @@ export default class Presentation extends React.Component {
               // ...
             ]}/>
         <Slide transition={["fade"]} bgImage={gifs.t2baby}/>
+        <Slide transition={['fade']} bgColor="primary" textColor="white">
+          <CustomHeading>
+            Demo
+          </CustomHeading>
+        </Slide>
         <Slide transition={["fade"]} bgImage={gifs.bye}/>
         <Slide transition={["fade"]} bgImage={gifs.nono}/>
         <Slide transition={[
