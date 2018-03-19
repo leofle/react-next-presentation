@@ -11,7 +11,7 @@
 ## Content
 
 * Introduction
-* Sr UX Engineer
+* Lead UX Engineer
 * I make cool stuff
 * What is NOT About
 * What it IS About
