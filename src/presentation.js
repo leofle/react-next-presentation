@@ -40,7 +40,11 @@ const theme = createTheme(
     white: '#fff'
   },
   {
-    primary: { name: "Roboto", googleFont: true, styles: ["400", "700"] },
+    primary: {
+      name: "Roboto",
+      googleFont: true,
+      styles: ["400", "700"]
+    },
     secondary: 'sans-serif',
   }
 );
