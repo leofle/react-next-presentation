@@ -13,11 +13,14 @@
 * Introduction
 * Lead UX Engineer
 * I make cool stuff
-* What is NOT About
 * What it IS About
+* What did i use
 * What is Machinne learning?
 * Quote
-* ML explanation (img)
+* ML explanation1 (img)
+* ML explanation2 (img)
+* ML explanation3 (img)
+* ML explanation4 (img)
 * Netflix (Recomendations)
 * Example Netflix
 * Facebook (Face Recognition and more...)

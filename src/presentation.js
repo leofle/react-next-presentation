@@ -4,7 +4,6 @@ import styled from 'styled-components';
 
 // Import Spectacle Core tags
 import {
-  Appear,
   Deck,
   Heading,
   ListItem,
@@ -62,7 +61,12 @@ const images = {
   rec4: require("./assets/netflix_recomends4.png"),
   face1: require("./assets/face-knows.png"),
   face2: require("./assets/face-knows2.png"),
-  sisense: require("./assets/sisense.png")
+  sisense: require("./assets/sisense.png"),
+  network: require("./assets/network.png"),
+  network2: require("./assets/network2.png"),
+  network3: require("./assets/network3.png"),
+  network4: require("./assets/network4.png"),
+  network5: require("./assets/network5.png")
 }
 const gifs = {
   t2baby: require("./assets/t2baby.gif"),
@@ -114,42 +118,31 @@ export default class Presentation extends React.Component {
           </Typeface>
           <Text textColor="transparent">blah blah</Text>
           <Heading size={3} textColor="secondary">
-          <span role="img" aria-label="rock horns with hand">
-            🤘
-          </span>
+            <span role="img" aria-label="rock horns with hand">
+              🤘
+            </span>
           </Heading>
         </Slide>
         <Slide transition={['fade']} bgColor="primary" textColor="white">
           <CustomHeading>
-              What is NOT About
-          </CustomHeading>
-          <List>
-          <Appear order={1}>
-            <ListItem>
-              Machinne learning
-            </ListItem>
-          </Appear>
-          <Appear order={2}>
-            <ListItem>
-              Design Patterns
-            </ListItem>
-          </Appear>
-          <Appear order={3}>
-            <ListItem>
-              AI Best practices
-            </ListItem>
-          </Appear>
-          </List>
-        </Slide>
-        <Slide transition={['fade']} bgColor="primary" textColor="white">
-          <CustomHeading>
-            What it IS About
+            What it IS About:
           </CustomHeading>
           <List>
             <ListItem>Ideas and research</ListItem>
             <ListItem>React components patterns</ListItem>
             <ListItem>AI as a helper</ListItem>
             <ListItem>Showing the path</ListItem>
+          </List>
+        </Slide>
+        <Slide transition={['fade']} bgColor="primary" textColor="white">
+          <CustomHeading>
+            What did i use:
+          </CustomHeading>
+          <List>
+            <ListItem>brain.js</ListItem>
+            <ListItem>context API</ListItem>
+            <ListItem>render props</ListItem>
+            <ListItem>styled components</ListItem>
           </List>
         </Slide>
         <Slide transition={['fade']} bgColor="primary" textColor="white">
@@ -166,11 +159,11 @@ export default class Presentation extends React.Component {
             <Cite>Wikipedia god</Cite>
           </BlockQuote>
         </Slide>
-        <Slide transition={['fade']} bgColor="primary" textColor="white">
-          <CustomHeading>
-            ML explanation (img)
-          </CustomHeading>
-        </Slide>
+        <Slide transition={["fade"]} bgImage={images.network}/>
+        <Slide transition={["fade"]} bgImage={images.network2}/>
+        <Slide transition={["fade"]} bgImage={images.network3}/>
+        <Slide transition={["fade"]} bgImage={images.network4}/>
+        <Slide transition={["fade"]} bgImage={images.network5}/>
         <Slide transition={['fade']} bgColor="primary" textColor="white">
           <Image src={images.netflix}/>
         </Slide>
@@ -197,12 +190,13 @@ export default class Presentation extends React.Component {
             color="#80de13"
             transition={[]}
             lang="js"
+            showLineNumbers={false}
             code={files.comp}
             ranges={[
-              { loc: [0, 12], title: "JSON Before" },
-              { loc: [0, 4], note: "The Beginning" },
-              { loc: [4, 8], note: "Heres a note!" },
-              { loc: [8, 12], note: "Heres a note!" },
+              { loc: [0, 12] },
+              { loc: [0, 12]},
+              { loc: [4, 8]},
+              { loc: [8, 12]},
               { loc: [0, 12] },
               // ...
             ]}/>
@@ -211,12 +205,13 @@ export default class Presentation extends React.Component {
             color="#80de13"
             transition={[]}
             lang="js"
+            showLineNumbers={false}
             code={files.json}
             ranges={[
-              { loc: [0, 15], title: "JSON After" },
-              { loc: [0, 5], note: "The Beginning" },
-              { loc: [5, 9], note: "Heres a note!" },
-              { loc: [9, 13], note: "Heres a note!" },
+              { loc: [0, 15] },
+              { loc: [0, 15]},
+              { loc: [5, 9]},
+              { loc: [9, 13]},
               { loc: [0, 15] },
               // ...
             ]}/>
