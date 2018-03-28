@@ -40,7 +40,7 @@ const theme = createTheme(
     white: '#fff'
   },
   {
-    primary: { name: "Roboto", googleFont: true, styles: [ "400", "700" ] },
+    primary: { name: "Roboto", googleFont: true, styles: ["400", "700"] },
     secondary: 'sans-serif',
   }
 );
@@ -81,11 +81,11 @@ export default class Presentation extends React.Component {
   render() {
     return (
       <Deck
-      controls={false}
-      progress={'bar'}
-      transition={['zoom', 'slide']}
-      transitionDuration={500}
-      theme={theme}
+        controls={false}
+        progress={'bar'}
+        transition={['zoom', 'slide']}
+        transitionDuration={500}
+        theme={theme}
       >
         <Slide align="center flex-end" transition={['fade']} bgImage={images.t2} bgSize={'69vh'} bgRepeat={'no-repeat'}>
           <RedShadow>
@@ -150,79 +150,79 @@ export default class Presentation extends React.Component {
             What is Machinne learning?
           </CustomHeading>
         </Slide>
-        <Slide transition={["fade"]} bgImage={gifs.t100}/>
+        <Slide transition={["fade"]} bgImage={gifs.t100} />
         <Slide transition={['fade']} bgColor="primary" textColor="white">
           <BlockQuote >
             <Quote textColor="white">
-              "...Machine learning is a field of computer science that gives computer systems the ability to "learn" with data, without being explicitly programmed..."              
+              "...Machine learning is a field of computer science that gives computer systems the ability to "learn" with data, without being explicitly programmed..."
             </Quote>
             <Cite>Wikipedia god</Cite>
           </BlockQuote>
         </Slide>
-        <Slide transition={["fade"]} bgImage={images.network}/>
-        <Slide transition={["fade"]} bgImage={images.network2}/>
-        <Slide transition={["fade"]} bgImage={images.network3}/>
-        <Slide transition={["fade"]} bgImage={images.network4}/>
-        <Slide transition={["fade"]} bgImage={images.network5}/>
+        <Slide transition={["fade"]} bgImage={images.network} />
+        <Slide transition={["fade"]} bgImage={images.network2} />
+        <Slide transition={["fade"]} bgImage={images.network3} />
+        <Slide transition={["fade"]} bgImage={images.network4} />
+        <Slide transition={["fade"]} bgImage={images.network5} />
         <Slide transition={['fade']} bgColor="primary" textColor="white">
-          <Image src={images.netflix}/>
+          <Image src={images.netflix} />
         </Slide>
-        <Slide transition={['fade']} bgImage={images.rec1}/>
-        <Slide transition={['fade']} bgImage={images.rec2}/>
-        <Slide transition={['fade']} bgImage={images.rec3}/>
-        <Slide transition={['fade']} bgImage={images.rec4}/>
+        <Slide transition={['fade']} bgImage={images.rec1} />
+        <Slide transition={['fade']} bgImage={images.rec2} />
+        <Slide transition={['fade']} bgImage={images.rec3} />
+        <Slide transition={['fade']} bgImage={images.rec4} />
         <Slide transition={['fade']} bgColor="primary" textColor="white">
-          <Image width="500px" src={images.facebook}/>
+          <Image width="500px" src={images.facebook} />
         </Slide>
-        <Slide transition={['fade']} bgImage={images.face1}/>
-        <Slide transition={['fade']} bgImage={images.face2}/>
+        <Slide transition={['fade']} bgImage={images.face1} />
+        <Slide transition={['fade']} bgImage={images.face2} />
         <Slide transition={['fade']} bgColor="primary" textColor="white">
-          <Image src={images.tesla}/>
+          <Image src={images.tesla} />
         </Slide>
-        <Slide transition={["fade"]} bgImage={gifs.tesla}/>
+        <Slide transition={["fade"]} bgImage={gifs.tesla} />
         <Slide transition={['fade']} bgColor="primary" textColor="white">
           <CustomHeading>
             What if?...
           </CustomHeading>
         </Slide>
         <CodeSlide
-            bgColor="#000"
-            color="#80de13"
-            transition={[]}
-            lang="js"
-            showLineNumbers={false}
-            code={files.comp}
-            ranges={[
-              { loc: [0, 12] },
-              { loc: [0, 12]},
-              { loc: [4, 8]},
-              { loc: [8, 12]},
-              { loc: [0, 12] },
-              // ...
-            ]}/>
+          bgColor="#000"
+          color="#80de13"
+          transition={[]}
+          lang="js"
+          showLineNumbers={false}
+          code={files.comp}
+          ranges={[
+            { loc: [0, 12] },
+            { loc: [0, 12] },
+            { loc: [4, 8] },
+            { loc: [8, 12] },
+            { loc: [0, 12] },
+            // ...
+          ]} />
         <CodeSlide
-            bgColor="#000"
-            color="#80de13"
-            transition={[]}
-            lang="js"
-            showLineNumbers={false}
-            code={files.json}
-            ranges={[
-              { loc: [0, 15] },
-              { loc: [0, 15]},
-              { loc: [5, 9]},
-              { loc: [9, 13]},
-              { loc: [0, 15] },
-              // ...
-            ]}/>
-        <Slide transition={["fade"]} bgImage={gifs.t2baby}/>
+          bgColor="#000"
+          color="#80de13"
+          transition={[]}
+          lang="js"
+          showLineNumbers={false}
+          code={files.json}
+          ranges={[
+            { loc: [0, 15] },
+            { loc: [0, 15] },
+            { loc: [5, 9] },
+            { loc: [9, 13] },
+            { loc: [0, 15] },
+            // ...
+          ]} />
+        <Slide transition={["fade"]} bgImage={gifs.t2baby} />
         <Slide transition={['fade']} bgColor="primary" textColor="white">
           <CustomHeading>
             Demo
           </CustomHeading>
         </Slide>
-        <Slide transition={["fade"]} bgImage={gifs.bye}/>
-        <Slide transition={["fade"]} bgImage={gifs.nono}/>
+        <Slide transition={["fade"]} bgImage={gifs.bye} />
+        <Slide transition={["fade"]} bgImage={gifs.nono} />
         <Slide transition={[
           'fade',
           (transitioning, forward) => {
