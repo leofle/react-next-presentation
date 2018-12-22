@@ -79,7 +79,8 @@ const gifs = {
   t100: require("./assets/t100.gif"),
   bye: require("./assets/bye.gif"),
   nono: require("./assets/nono.gif"),
-  tesla: require("./assets/tesla.gif")
+  tesla: require("./assets/tesla.gif"),
+  training: require("./assets/training.gif")
 };
 preloader(images);
 
@@ -93,43 +94,20 @@ export default class Presentation extends React.Component {
         transitionDuration={500}
         theme={theme}
       >
-        <Slide
-          align="center flex-end"
-          transition={["fade"]}
-          bgImage={images.t2}
-          bgSize={"69vh"}
-          bgRepeat={"no-repeat"}
-        >
-          <RedShadow>
-            <Text
-              margin="10px 0 0"
-              textColor="white"
-              textSize={"54px"}
-              caps
-              bold
-              googleFont="Roboto"
-            >
-              Componator 2
-            </Text>
-            <Text
-              margin="10px 0 0"
-              textColor="white"
-              textSize={"54px"}
-              caps
-              bold
-              googleFont="Roboto"
-            >
-              Judgment Day
-            </Text>
-          </RedShadow>
+        <Slide transition={["fade"]} bgColor="primary" textColor="white">
+          <BlockQuote>
+            <Quote textColor="white">
+              "...Machine learning is a field of computer science that gives
+              computer systems the ability to "learn" with data, without being
+              explicitly programmed..."
+            </Quote>
+            <Cite>Wikipedia god</Cite>
+          </BlockQuote>
         </Slide>
         <Slide transition={["zoom"]} bgColor="primary">
           <Heading size={1} fit lineHeight={1} textColor="white">
-            How i create UI with React and Machine learning
+            State of ML 2018
           </Heading>
-          <Text margin="10px 0 0" textColor="white" size={1} fit bold>
-            and why we need this any ways...
-          </Text>
         </Slide>
         <Slide transition={["fade"]} bgColor="primary">
           <Typeface googleFont="Josefin Slab" weight={400}>
@@ -156,43 +134,6 @@ export default class Presentation extends React.Component {
           </Heading>
         </Slide>
         <Slide transition={["fade"]} bgColor="primary" textColor="white">
-          <CustomHeading>What it IS About:</CustomHeading>
-          <List>
-            <ListItem>Ideas and research</ListItem>
-            <ListItem>React components patterns</ListItem>
-            <ListItem>AI as a helper</ListItem>
-            <ListItem>Showing the path</ListItem>
-          </List>
-        </Slide>
-        <Slide transition={["fade"]} bgColor="primary" textColor="white">
-          <CustomHeading>What did i use:</CustomHeading>
-          <List>
-            <ListItem>brain.js</ListItem>
-            <ListItem>context API</ListItem>
-            <ListItem>render props</ListItem>
-            <ListItem>styled components</ListItem>
-          </List>
-        </Slide>
-        <Slide transition={["fade"]} bgColor="primary" textColor="white">
-          <CustomHeading>What is Machinne learning?</CustomHeading>
-        </Slide>
-        <Slide transition={["fade"]} bgImage={gifs.t100} />
-        <Slide transition={["fade"]} bgColor="primary" textColor="white">
-          <BlockQuote>
-            <Quote textColor="white">
-              "...Machine learning is a field of computer science that gives
-              computer systems the ability to "learn" with data, without being
-              explicitly programmed..."
-            </Quote>
-            <Cite>Wikipedia god</Cite>
-          </BlockQuote>
-        </Slide>
-        <Slide transition={["fade"]} bgImage={images.network} />
-        <Slide transition={["fade"]} bgImage={images.network2} />
-        <Slide transition={["fade"]} bgImage={images.network3} />
-        <Slide transition={["fade"]} bgImage={images.network4} />
-        <Slide transition={["fade"]} bgImage={images.network5} />
-        <Slide transition={["fade"]} bgColor="primary" textColor="white">
           <Image src={images.netflix} />
         </Slide>
         <Slide transition={["fade"]} bgImage={images.rec1} />
@@ -208,52 +149,8 @@ export default class Presentation extends React.Component {
           <Image src={images.tesla} />
         </Slide>
         <Slide transition={["fade"]} bgImage={gifs.tesla} />
-        <Slide transition={["fade"]} bgColor="primary" textColor="white">
-          <CustomHeading>What if?...</CustomHeading>
-        </Slide>
-        <CodeSlide
-          bgColor="#000"
-          color="#80de13"
-          transition={[]}
-          lang="js"
-          showLineNumbers={false}
-          code={files.comp}
-          ranges={[
-            { loc: [0, 12] },
-            { loc: [0, 12] },
-            { loc: [4, 8] },
-            { loc: [8, 12] },
-            { loc: [0, 12] }
-            // ...
-          ]}
-        />
-        <Slide transition={["fade"]} bgColor="primary">
-          <Image src={images.chrome2} width={500} />
-        </Slide>
-        <CodeSlide
-          bgColor="#000"
-          color="#80de13"
-          transition={[]}
-          lang="js"
-          showLineNumbers={false}
-          code={files.json}
-          ranges={[
-            { loc: [0, 15] },
-            { loc: [0, 15] },
-            { loc: [5, 9] },
-            { loc: [9, 13] },
-            { loc: [0, 15] }
-            // ...
-          ]}
-        />
-        <Slide transition={["fade"]} bgColor="primary">
-          <Image src={images.chrome1} width={500} />
-        </Slide>
+        <Slide transition={["fade"]} bgImage={gifs.training} />
         <Slide transition={["fade"]} bgImage={gifs.nono} />
-        {/* <Slide transition={["fade"]} bgImage={gifs.t2baby} /> */}
-        <Slide transition={["fade"]} bgColor="primary" textColor="white">
-          <CustomHeading>Demo</CustomHeading>
-        </Slide>
         <Slide transition={["fade"]} bgImage={gifs.bye} />
         <Slide
           transition={[
