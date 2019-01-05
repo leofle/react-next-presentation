@@ -6,8 +6,6 @@ import styled from "styled-components";
 import {
   Deck,
   Heading,
-  ListItem,
-  List,
   Slide,
   Text,
   BlockQuote,
@@ -21,15 +19,11 @@ import {
 import createTheme from "spectacle/lib/themes/default";
 // Import preloader
 import preloader from "spectacle/lib/utils/preloader";
-import CodeSlide from "spectacle-code-slide";
 // Require CSS
 require("normalize.css");
 const CustomHeading = styled.h1`
   font-size: 2em;
   color: white;
-`;
-const RedShadow = styled.p`
-  text-shadow: 4px 3px 5px #a20902;
 `;
 const theme = createTheme(
   {
@@ -49,10 +43,6 @@ const theme = createTheme(
   }
 );
 
-const files = {
-  comp: require("./assets/component.txt"),
-  json: require("./assets/jsonAfter.txt")
-};
 const images = {
   react: require("./assets/react-logo.png"),
   t2: require("./assets/liot2.png"),
@@ -66,13 +56,20 @@ const images = {
   face1: require("./assets/face-knows.png"),
   face2: require("./assets/face-knows2.png"),
   sisense: require("./assets/sisense.png"),
-  network: require("./assets/network.png"),
-  network2: require("./assets/network2.png"),
-  network3: require("./assets/network3.png"),
-  network4: require("./assets/network4.png"),
-  network5: require("./assets/network5.png"),
-  chrome1: require("./assets/chrome-list.png"),
-  chrome2: require("./assets/chrome-nolist.png")
+  snap: require("./assets/snapface.jpg"),
+  snaplogo: require("./assets/snapchat-logo.jpg"),
+  deepmind: require("./assets/deepmind.jpg"),
+  feed1: require("./assets/feed1.jpg"),
+  feed2: require("./assets/feed2.jpg"),
+  amazon: require("./assets/amazon1.png"),
+  amazonlogo: require("./assets/amazon-logo.jpg"),
+  amazonstack: require("./assets/amazonstack.png"),
+  applelogo: require("./assets/apple-logo.png"),
+  auto: require("./assets/auto.png"),
+  gmail: require("./assets/gmail.png"),
+  instalogo: require("./assets/insta-logo.png"),
+  insta: require("./assets/instafeed.jpg"),
+  zone: require("./assets/zone.jpg"),
 };
 const gifs = {
   t2baby: require("./assets/t2baby.gif"),
@@ -80,7 +77,9 @@ const gifs = {
   bye: require("./assets/bye.gif"),
   nono: require("./assets/nono.gif"),
   tesla: require("./assets/tesla.gif"),
-  training: require("./assets/training.gif")
+  training: require("./assets/training.gif"),
+  search: require("./assets/search.gif"),
+  siri: require("./assets/siri.gif"),
 };
 preloader(images);
 
@@ -134,6 +133,17 @@ export default class Presentation extends React.Component {
           </Heading>
         </Slide>
         <Slide transition={["fade"]} bgColor="primary" textColor="white">
+          <Image src={images.applelogo} />
+        </Slide>
+        <Slide transition={["fade"]} bgColor="primary" textColor="white">
+          <Image width="370px" src={images.auto} />
+        </Slide>
+        <Slide transition={["fade"]} bgColor="primary" textColor="white">
+          <Image width="370px" src={gifs.siri} />
+        </Slide>
+        <Slide transition={["fade"]} bgImage={gifs.search} />
+        <Slide transition={["fade"]} bgImage={images.gmail} />
+        <Slide transition={["fade"]} bgColor="primary" textColor="white">
           <Image src={images.netflix} />
         </Slide>
         <Slide transition={["fade"]} bgImage={images.rec1} />
@@ -141,14 +151,47 @@ export default class Presentation extends React.Component {
         <Slide transition={["fade"]} bgImage={images.rec3} />
         <Slide transition={["fade"]} bgImage={images.rec4} />
         <Slide transition={["fade"]} bgColor="primary" textColor="white">
+          <Image src={images.amazonlogo} />
+        </Slide>
+        <Slide transition={["fade"]} bgColor="primary" textColor="white">
+          <Image src={images.amazon} />
+        </Slide>
+        <Slide transition={["fade"]} bgColor="primary" textColor="white">
+          <Image  src={images.amazonstack} />
+        </Slide>
+        <Slide transition={["fade"]} bgColor="primary" textColor="white">
           <Image width="500px" src={images.facebook} />
         </Slide>
         <Slide transition={["fade"]} bgImage={images.face1} />
         <Slide transition={["fade"]} bgImage={images.face2} />
         <Slide transition={["fade"]} bgColor="primary" textColor="white">
+          <Image width="370px" src={images.feed1} />
+        </Slide>
+        <Slide transition={["fade"]} bgColor="primary" textColor="white">
+          <Image width="370px" src={images.feed2} />
+        </Slide>
+        <Slide transition={["fade"]} bgColor="primary" textColor="white">
+          <Image width="500px" src={images.instalogo} />
+        </Slide>
+        <Slide transition={["fade"]} bgColor="primary" textColor="white">
+          <Image width="370px" src={images.insta} />
+        </Slide>
+        <Slide transition={["fade"]} bgColor="primary" textColor="white">
+          <Image src={images.zone} />
+        </Slide>
+        <Slide transition={["fade"]} bgColor="primary" textColor="white">
           <Image src={images.tesla} />
         </Slide>
         <Slide transition={["fade"]} bgImage={gifs.tesla} />
+        <Slide transition={["fade"]} bgColor="primary" textColor="white">
+          <Image src={images.snaplogo} />
+        </Slide>
+        <Slide transition={["fade"]} bgColor="primary" textColor="white">
+          <Image src={images.snap} />
+        </Slide>
+        <Slide transition={["fade"]} bgColor="primary" textColor="white">
+          <Image src={images.deepmind} />
+        </Slide>
         <Slide transition={["fade"]} bgImage={gifs.training} />
         <Slide transition={["fade"]} bgImage={gifs.nono} />
         <Slide transition={["fade"]} bgImage={gifs.bye} />
